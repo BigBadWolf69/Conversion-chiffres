@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body onLoad='window.status="www.chez.com/gt/";document.forms[0].query.focus();'>
+        <p align="left"> 
+            <b> 
+                <i>
+                    <font size="5">Conversion Chiffres romains en Entiers arabes et inversement.</font>
+                </i>
+            </b>
+        <p align="center"> 
+    <form>
+        <table border=0 width='53%'>
+            <tr height='50'>
+                <p align="left">
+                    <b>Entrer un chiffre romain ou un entier :</b>
+                        <input type='text' name='query' value='' size='15' style="font-size: 14pt; font-weight: bold; color:#000000; background-color:#FFFFFF">
+                </p>
+                <p align="left"></p>
+                    <b>
+                        <i><font size="4">Choix conversion :</font><br>
+                        </i><br>
+                            Entier <font size="5"> ↦ </font> Romain 
+                    </b>
+                <input type='radio' value='Entier->Romain' onClick='document.forms[0].result.value=intToRom(document.forms[0].query.value);' style="font-size: 14pt; font-weight: bold; color:#000000; background-color:#FFFFFF" name><br>
+                    <b>
+                        Romain<font size="5"> ↦ </font>Entier
+                    </b> 
+
+                <input type='radio' value='Romain->Entier'      onClick='document.forms[0].result.value=romToInt(document.forms[0].query.value);' style="font-size: 14pt; font-weight: bold; color:#000000; background-color:#FFFFFF" name>
+                    <p align="left">
+
+                <b>
+                    <font size="4" color="#FF0000">Résultat de la conversion : </font>
+                </b>
+
+                        <input type='text' name='result' value='' size='15' onFocus='this.blur()' style="font-size: 14pt; font-weight: bold; color:#FF0000; background-color:#FFFFFF">
+                    <p align="left">
+                        <input type='reset' value='Effacer' style="background-color: #FFFFFF; color:#000000; font-weight:bold">
+                </td>
+            </tr>
+        </table>
+      </form>
+      <p align="left">
+        <i>
+            <b>
+                <font size=-1>
+                    NB : Les chiffres à convertir doivent être compris entre 1 et 3999 (compris) ou I et MMMCMXCIX
+                </font>
+            </b>
+        </i>
+    <script type="text/javascript" src="rom.js"></script>
+</body>
+</html>
